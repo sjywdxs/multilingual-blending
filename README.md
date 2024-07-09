@@ -64,7 +64,7 @@ python3 translatio_wrapper.py \
 
 `--embedding_model`: The name of the embedding model for semantic similarity calculation.
 
-`--lang_combinations`: the list of language codes. For example, to translate the queries into a combination of [English, German, French], the input list should be `[en, de, fr]`.   The script also supports nested lists with various language combinations; namely, with an input of `[[ja, zh-cn, kr], [en, de, fr]],` the script will produce two transformed datasets w.r.t to the two combinations, respectively.
+`--lang_combinations`: The list of language codes. For example, to translate the queries into a combination of [English, German, French], the input list should be `[en, de, fr]`.  The script also supports nested lists with various language combinations; namely, with an input of `[[ja, zh-cn, kr], [en, de, fr]],` the script will produce two transformed datasets w.r.t to the two combinations, respectively.
 
 `--path_to_question`: Path to read the malicous questions. The default path leads to the 120 collectd samples used in our study. You are free to use your own data as long as you align the data format with default one.
 
@@ -89,9 +89,9 @@ python3 inference_wrapper.py \
 
 `--embedding_model`: The name of the embedding model for semantic similarity calculation.
 
-`--path_to_data`:Path to read the malicous questions. The default path leads to the 120 collectd samples used in our study. You are free to use your own data as long as you align the data format with default one.
+`--path_to_data`: Path to read the malicous questions. The default path leads to the 120 collectd samples used in our study. You are free to use your own data as long as you align the data format with default one.
 
-`--llm_model`: name of the LLM. Our scripts support [OpenAI models](https://platform.openai.com/docs/models) as well as the models provided by [LLAMA API](https://www.llama-api.com/), such as llama3, Mistral and Qwen.
+`--llm_model`: Name of the LLM. Our scripts support [OpenAI models](https://platform.openai.com/docs/models) as well as the models provided by [LLAMA API](https://www.llama-api.com/), such as llama3, Mistral and Qwen.
 
 `--setting`: The type of mixed-language scheme.  `mix_to_en` stands for mixed-language queries with Engish responses, `en_to_mix` stands for English queries with mixed-language responses, `single` is for individual source languages and `mix_to_mix` is for mixed-language queries and mixed-language responses (Multilingual Blending).
 
@@ -105,5 +105,8 @@ python3 inference_wrapper.py \
 
 ## 📃 Results
 
-All experiment results are available in the `dataset` directory,  categorized with different models and factors. 
+All experimental results are available in the `dataset` directory,  categorized with different models and factors. 
 
+For example, under folder `dataset/gpt-4o`, the experimnet results of `genetics/`, `morphology/`, `num_language/`, `resource_level/`, `uncertainty/` and `single_language/`, etc.
+Each `.csv` file represents the inference and evaluation results w.r.t to a specific langauge combination, which is indicated by the file name.
+For instance `mailcious_questions-da-pt-es-lt-translated_inference-evaluated.csv` represents the experimnetal results for language combination `[da, pt, es, lt]` that is Danish, Portuguese, Spanish and Lithuanian.
