@@ -1,7 +1,7 @@
 <h1 align="center">Multilingual Blending: LLM Safety Alignment Evaluation with Language Mixture</h1>
 
  
-This is the anonymous repository for our paper: *Multilingual Blending: LLM Safety Alignment Evaluation with Language Mixture*.
+This is the repository for our paper: *Multilingual Blending: LLM Safety Alignment Evaluation with Language Mixture*.
 
 <div align="center">
   <img src="plots/sample_illustration.png" alt="workflow" width="650">
